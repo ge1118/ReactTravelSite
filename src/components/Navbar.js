@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import { Button } from './Button';
@@ -21,6 +21,10 @@ function Navbar() {
   };
 
   window.addEventListener('resize', showButton);
+
+  useEffect(() => {
+    showButton();
+  }, [])
 
   return (
     <>

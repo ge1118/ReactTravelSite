@@ -1,16 +1,17 @@
 /* eslint-disable */
 
 import './App.css';
-import NavBar from './components/Navbar';
+import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
 
 function App() {
   return (
     <>
     <Router>
-      <NavBar />
+      <Navbar />
       <Routes>
-        <Route path='/' />
+        <Route path='/' Component={Home} />
       </Routes>
     </Router>
     </>
